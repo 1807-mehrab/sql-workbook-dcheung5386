@@ -1,0 +1,48 @@
+SELECT * FROM Employee 
+WHERE lastname = 'King'; 
+
+SELECT * FROM Employee 
+WHERE firstname = 'Andrew' and REPORTSTO IS NULL; 
+
+SELECT * FROM Album 
+ORDER BY title DESC; 
+
+SELECT FIRSTNAME FROM CUSTOMER
+ ORDER BY CITY ASC;
+ 
+INSERT INTO GENRE (GENREID, NAME) VALUES (26,'Dubstep');
+INSERT INTO GENRE (GENREID, NAME) VALUES (27,'Soundtrack');
+INSERT INTO EMPLOYEE (EMPLOYEEID, LASTNAME, FIRSTNAME, TITLE, REPORTSTO, BIRTHDATE, HIREDATE, ADDRESS, CITY, STATE, COUNTRY, POSTALCODE, PHONE, FAX, EMAIL ) 
+VALUES (9,'Cheung','Derrick', 'Intern', '1', '10-Jan-98', '10-Jan-04','23 Playground Street','Dallas','TX','United States', 'T5K 2N1','+1 (780) 425-9882','+1 (403) 262-3112','Derrick@chinookcorp.com ' );
+
+
+INSERT INTO EMPLOYEE (EMPLOYEEID, LASTNAME, FIRSTNAME, TITLE, REPORTSTO, BIRTHDATE, HIREDATE, ADDRESS, CITY, STATE, COUNTRY, POSTALCODE, PHONE, FAX, EMAIL ) 
+VALUES (10,'Smith','Rick Sanchez', 'Lead Scientist', '1', '10-may-42', '10-Sep-04','27 Pickle Rick Street','Houston','TX','United States', 'T5L 3N1','+1 (780) 425-9638','+1 (403) 221-3112','Rick@chinookcorp.com ' );
+
+
+UPDATE Customer
+SET FIRSTNAME = 'Robert',LASTNAME = 'Walter Task'
+WHERE FIRSTNAME = 'Aaron' AND LASTNAME = 'Mitchell';
+
+UPDATE ARTIST
+SET NAME = 'CCR'
+WHERE NAME = 'Creedence Clearwater Revival;
+
+SELECT * FROM INVOICE
+WHERE billingaddress LIKE 'T%';
+
+SELECT * 
+FROM invoice
+WHERE TOTAL BETWEEN 15 and 50;
+
+
+SELECT * 
+FROM EMPLOYEE
+WHERE HIREDATE BETWEEN 15 and 50;
+
+SELECT * 
+FROM EMPLOYEE
+WHERE HIREDATE BETWEEN #01-JUN-03# and #01-MAR-04#;
+
+DELETE FROM Customer
+WHERE CUSTOMERID = '32' and FIRSTNAME ='Robert' and lastname = 'Walter Task';
